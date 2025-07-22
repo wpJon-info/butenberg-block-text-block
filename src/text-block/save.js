@@ -18,6 +18,8 @@ import { useBlockProps, RichText } from '@wordpress/block-editor';
 export default function save({ attributes }) {
 	const { content } = attributes;
 
+	{/* Comment test */}
+
 	return (
 		<div {...useBlockProps.save()}>
 			<RichText.Content
@@ -28,3 +30,4 @@ export default function save({ attributes }) {
 		</div>
 	);
 }
+
