@@ -1,9 +1,39 @@
-/**
- * The following styles get applied inside the editor only.
- *
- * Replace them with your own styles or remove the file completely.
- */
-
-.wp-block-create-block-text-block {
-	border: 1px dotted #f00;
+.wp-block-jon-gutenberg-dev-text-block {
+	.custom-text-block {
+		border: 1px solid #e1e4e8;
+		border-radius: 6px;
+		padding: 16px;
+		min-height: 50px;
+		background-color: #f6f8fa;
+		font-family: 'SF Mono', Monaco, Inconsolata, 'Roboto Mono', Consolas, 'Courier New', monospace;
+		font-size: 14px;
+		line-height: 1.45;
+		color: #0366d6 !important;
+		
+		&:focus {
+			outline: none;
+			border-color: #0366d6;
+			box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.1);
+		}
+		
+		// Force blue text color everywhere
+		&, * {
+			color: #0366d6 !important;
+		}
+		
+		// Placeholder styling
+		&[data-is-placeholder-visible="true"] {
+			color: #6a737d !important;
+		}
+		
+		// Remove default margins
+		p {
+			margin: 0;
+		}
+		
+		// Make sure the text is editable
+		&[contenteditable="true"] {
+			cursor: text;
+		}
+	}
 }

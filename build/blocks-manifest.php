@@ -6,7 +6,7 @@ return array(
 		'apiVersion' => 3,
 		'name' => 'jon-gutenberg-dev/text-block',
 		'version' => '1.0.0',
-		'title' => 'Jon\'s Famouse Text Block',
+		'title' => 'Jon Dev Text Block',
 		'category' => 'text',
 		'icon' => 'text',
 		'description' => 'A custom text block for enhanced content editing.',
@@ -18,6 +18,12 @@ return array(
 			'dev',
 			'text',
 			'custom'
+		),
+		'attributes' => array(
+			'content' => array(
+				'type' => 'string',
+				'default' => 'Enter your text here...'
+			)
 		),
 		'supports' => array(
 			'html' => false,

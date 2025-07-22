@@ -9,9 +9,9 @@ import { __ } from '@wordpress/i18n';
  * React hook that is used to mark the block wrapper element.
  * It provides all the necessary props like the class name.
  *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
+ * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useBlockProps
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, RichText } from '@wordpress/block-editor';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -29,10 +29,19 @@ import './editor.scss';
  *
  * @return {Element} Element to render.
  */
-export default function Edit() {
+export default function Edit({ attributes, setAttributes }) {
+	const { content } = attributes;
+
 	return (
-		<p { ...useBlockProps() }>
-			{ __( 'Text Block – hello from the editor!', 'text-block' ) }
-		</p>
+		<div {...useBlockProps()}>
+			<RichText
+				tagName="div"
+				className="custom-text-block"
+				value={content}
+				onChange={(value) => setAttributes({ content: value })}
+				placeholder={__('Enter your text here...', 'jon-gutenberg-dev-text-block')}
+				allowedFormats={['core/bold', 'core/italic', 'core/link']}
+			/>
+		</div>
 	);
 }

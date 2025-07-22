@@ -1,12 +1,22 @@
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
-
-.wp-block-create-block-text-block {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+.wp-block-jon-gutenberg-dev-text-block {
+	.custom-text-block {
+		border: 1px solid #e1e4e8;
+		border-radius: 6px;
+		padding: 16px;
+		background-color: #f6f8fa;
+		font-family: 'SF Mono', Monaco, Inconsolata, 'Roboto Mono', Consolas, 'Courier New', monospace;
+		font-size: 14px;
+		line-height: 1.45;
+		color: #0366d6 !important;
+		
+		// Force blue text color everywhere
+		&, * {
+			color: #0366d6 !important;
+		}
+		
+		// Remove default margins
+		p {
+			margin: 0;
+		}
+	}
 }

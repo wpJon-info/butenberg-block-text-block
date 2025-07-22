@@ -1,13 +1,33 @@
 /*!***************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/text-block/editor.scss ***!
   \***************************************************************************************************************************************************************************************************************************************************/
-/**
- * The following styles get applied inside the editor only.
- *
- * Replace them with your own styles or remove the file completely.
- */
-.wp-block-create-block-text-block {
-  border: 1px dotted #f00;
+.wp-block-jon-gutenberg-dev-text-block .custom-text-block {
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 16px;
+  min-height: 50px;
+  background-color: #f6f8fa;
+  font-family: "SF Mono", Monaco, Inconsolata, "Roboto Mono", Consolas, "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #0366d6 !important;
+}
+.wp-block-jon-gutenberg-dev-text-block .custom-text-block:focus {
+  outline: none;
+  border-color: #0366d6;
+  box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.1);
+}
+.wp-block-jon-gutenberg-dev-text-block .custom-text-block, .wp-block-jon-gutenberg-dev-text-block .custom-text-block * {
+  color: #0366d6 !important;
+}
+.wp-block-jon-gutenberg-dev-text-block .custom-text-block[data-is-placeholder-visible=true] {
+  color: #6a737d !important;
+}
+.wp-block-jon-gutenberg-dev-text-block .custom-text-block p {
+  margin: 0;
+}
+.wp-block-jon-gutenberg-dev-text-block .custom-text-block[contenteditable=true] {
+  cursor: text;
 }
 
 /*# sourceMappingURL=index.css.map*/
